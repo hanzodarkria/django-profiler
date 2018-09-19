@@ -1,0 +1,13 @@
+*.py[co]
+*~
+.sass-cache
+db.sqlite*
+.pydevproject
+.project
+.metadata
+*.mo
+.DS_Store
+.idea
+logs
+env
+media

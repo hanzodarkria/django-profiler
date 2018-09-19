@@ -1,0 +1,29 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+<div class="list-group">
+    <a href="#" class="list-group-item">Home</a>
+    {% if user.is_authenticated %}
+    <a href="/accounts/profile/" class="list-group-item">Profile</a>
+    <a href="/accounts/profile/edit/" class="list-group-item">Edit Profile</a>
+    <a href="/accounts/change-password/" class="list-group-item">Change Password</a>
+    {% endif %}
+    <a href="/accounts/login/" class="list-group-item">Login</a>
+    <a href="/accounts/register/" class="list-group-item">Register</a>
+    <a href="/accounts/reset-password/" class="list-group-item">Reset Password</a>
+    <a href="/accounts/logout/" class="list-group-item">Logout</a>
+</div>
+<div class="container">
+    {% block body %}
+    {% endblock %}
+</div>
+</body>
+</html>
